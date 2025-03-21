@@ -22,7 +22,6 @@ $personas = $result->fetchAll();
     <table border="1">
         <thead>
             <tr>
-                <th>ID</th>
                 <th>Nombre</th>
                 <th>Email</th>
                 <th>Edad</th>
@@ -33,7 +32,6 @@ $personas = $result->fetchAll();
         <tbody>
             <?php foreach ($personas as $persona): ?>
             <tr>
-                <td><?= $persona['id'] ?></td>
                 <td><?= $persona['nombre'] ?></td>
                 <td><?= $persona['email'] ?></td>
                 <td><?= $persona['edad'] ?></td>
