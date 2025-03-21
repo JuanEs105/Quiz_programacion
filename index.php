@@ -8,7 +8,7 @@ $personas = $stmt->fetchAll();
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CRUD Personas</title>
+    <title> Personas</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
