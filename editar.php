@@ -8,16 +8,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
     $edad = $_POST['edad'];
 
-    // Actualizar los datos de la persona
+   
     $stmt = $conn->prepare("UPDATE personas SET nombre = ?, email = ?, edad = ? WHERE id = ?");
     $stmt->execute([$nombre, $email, $edad, $id]);
 
-    // Redirigir a index.php
+   
     header("Location: index.php");
     exit();
 }
 
-// Obtener los datos de la persona para mostrar en el formulario
+
 $sql = "SELECT * FROM personas WHERE id = ?";
 $stmt = $conn->prepare($sql);
 $stmt->execute([$id]);
