@@ -1,6 +1,7 @@
 <?php
 require 'conexion.php';
 
+// Leer datos de la tabla personas
 $sql = "SELECT * FROM personas";
 $result = $conn->query($sql);
 $personas = $result->fetchAll();
@@ -38,7 +39,7 @@ $personas = $result->fetchAll();
                 <td><?= $persona['edad'] ?></td>
                 <td><?= ($persona['edad'] >= 18) ? "Sí" : "No" ?></td>
                 <td>
-                    <a href="editor.php?id=<?= $persona['id'] ?>">Editar</a>
+                    <a href="editar.php?id=<?= $persona['id'] ?>">Editar</a>
                     <a href="eliminar.php?id=<?= $persona['id'] ?>" onclick="return confirm('¿Eliminar?')">Eliminar</a>
                 </td>
             </tr>
